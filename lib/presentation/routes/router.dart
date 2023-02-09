@@ -4,9 +4,9 @@ import 'package:go_router/go_router.dart';
 import 'package:go_router_tutorial/presentation/pages/bottom_tab/bottom_tab_page.dart';
 import 'package:go_router_tutorial/presentation/pages/second/second_page.dart';
 import 'package:go_router_tutorial/presentation/pages/first/first_page.dart';
-import 'package:go_router_tutorial/presentation/pages/fourth/fourth_page.dart';
-import 'package:go_router_tutorial/presentation/pages/fifth/fifth_page.dart';
-import 'package:go_router_tutorial/presentation/pages/third/third_page.dart';
+import 'package:go_router_tutorial/presentation/pages/home/home_page.dart';
+import 'package:go_router_tutorial/presentation/pages/settings/settings_page.dart';
+import 'package:go_router_tutorial/presentation/pages/camera/camera_page.dart';
 import 'package:page_transition/page_transition.dart';
 
 class AppRouter {
@@ -45,18 +45,18 @@ class AppRouter {
         },
         routes: [
           GoRoute(
-            name: "third_page",
-            path: "/third_page",
+            name: "camera_page",
+            path: "/camera_page",
             pageBuilder: (context, state) => CustomTransitionPage(
               transitionsBuilder: (context, animation, secondaryAnimation, child) {
                 return PageTransition(child: child, type: PageTransitionType.fade).child;
               },
-              child: const ThirdPage(),
+              child: const CameraPage(),
             ),
           ),
           GoRoute(
-            name: "fourth_page",
-            path: "/fourth_page",
+            name: "home_page",
+            path: "/home_page",
             pageBuilder: (context, state) {
               final String title = state.extra as String;
 
@@ -64,19 +64,19 @@ class AppRouter {
                 transitionsBuilder: (context, animation, secondaryAnimation, child) {
                   return PageTransition(child: child, type: PageTransitionType.fade).child;
                 },
-                child: FourthPage(title: title),
+                child: HomePage(title: title),
               );
             },
           ),
           GoRoute(
-            name: "fifth_page",
-            path: '/fifth_page',
+            name: "settings_page",
+            path: '/settings_page',
             pageBuilder: (context, state) {
               return CustomTransitionPage(
                 transitionsBuilder: (context, animation, secondaryAnimation, child) {
                   return PageTransition(child: child, type: PageTransitionType.fade).child;
                 },
-                child: const FifthPage(),
+                child: const SettingsPage(),
               );
             },
           ),

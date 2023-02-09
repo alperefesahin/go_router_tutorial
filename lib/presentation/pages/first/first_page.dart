@@ -20,9 +20,13 @@ class FirstPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              'First Page',
-              style: TextStyle(fontSize: 20),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                "Use 'Push' method to go to the second page",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
             ),
             const SizedBox(height: 20),
             ElevatedButton(

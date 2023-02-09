@@ -29,9 +29,9 @@ class SecondPage extends StatelessWidget {
                 So, go method uses the stack to move to the next page
                  */
 
-                context.go(context.namedLocation("third_page"));
+                context.go(context.namedLocation("camera_page"));
               },
-              child: const Text('Go to Third Page which is bottom tab'),
+              child: const Text('Go to Bottom Navigation Page'),
             ),
           ],
         ),
