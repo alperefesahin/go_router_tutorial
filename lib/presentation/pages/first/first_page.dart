@@ -33,9 +33,8 @@ class FirstPage extends StatelessWidget {
               onPressed: () {
                 /* 
                 If we use go method, the first page moves on top of the first page
-                If we use push, the first page moves directly to the bottom tab page
 
-                So, push method uses the stack to move to the next page
+                If we use push method, it uses the stack to move to the next page
                  */
 
                 context.push(context.namedLocation("second_page"));
